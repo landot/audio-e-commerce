@@ -1,3 +1,5 @@
+'use client'
+import CustomButton from '@/component/CustomButton'
 import Image from 'next/image'
 import styles from './page.module.css'
 
@@ -9,6 +11,16 @@ export default function Home() {
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
         </p>
+        <div>
+          <CustomButton label={'text'} styles={{
+        textColor: 'black',
+        hoverTextColor: 'gray',
+        backgroundColor: 'yellow',
+        hoverBackgroundColor: 'orange',
+        borderColor: 'blue',
+        hoverBorderColor: 'cyan',
+    }} />
+        </div>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"

@@ -1,0 +1,18 @@
+import ButtonStyles from "@/type/ButtonStyles";
+import styled from "styled-components";
+
+
+export const StyledButton = styled.button<ButtonStyles>`
+  padding: 10px;
+  color: ${props => props.textColor};
+  background-color: ${props => props.backgroundColor};
+  border: 1px solid ${props => props.borderColor};
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: ${props => props.hoverTextColor};
+    background-color: ${props => props.hoverBackgroundColor};
+    border-color: ${props => props.hoverBorderColor};
+  }
+`;
