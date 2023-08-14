@@ -5,5 +5,4 @@
     "plugin:storybook/recommended"
   ],
   "plugins": ["testing-library"]
-
 }
