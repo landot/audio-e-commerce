@@ -1,14 +1,23 @@
 import StyledTextInput from "@/style/TextInput.styles";
 import { InputContainer, TitleAndError, Title, Error } from "@/style/TextInputWithLabel.styles";
 
-function TextInputWithLabel(props: {title: string, error?: string}) {
+export interface TextInputWithLabelProps {
+    title: string;
+    value: string;
+    onChange?: () => void;
+    error?: string;
+}
+
+function TextInputWithLabel(props: TextInputWithLabelProps) {
     return (
         <InputContainer>
         <TitleAndError>
           <Title>{props.title}</Title>
-          <Error>{props.error}</Error>
+          {props.error && (
+              <Error>{props.error}</Error>
+          )}
         </TitleAndError>
-        <StyledTextInput/>
+        <StyledTextInput value={props.value} onChange={props.onChange}/>
       </InputContainer>
     )
 }

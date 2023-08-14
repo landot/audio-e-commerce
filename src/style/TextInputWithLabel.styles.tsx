@@ -12,16 +12,14 @@ export const TitleAndError = styled.div`
   margin-bottom: 8px;
 `;
 
-export const Title = styled.div`
+export const Title = styled.p`
   color: #000;
-  font-family: Manrope, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
 `;
 
-export const Error = styled.div`
+export const Error = styled.p`
   color: #FF0000;
-  font-family: Manrope, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 `;
