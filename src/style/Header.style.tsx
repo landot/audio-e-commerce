@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import SubTitle from "./SubTitle.styles"
+import SubTitle from "./SubTitle.styles";
 
 export const HeaderStyles = styled.nav`
     width: 100%;
@@ -10,15 +10,44 @@ export const HeaderStyles = styled.nav`
     img {
         cursor: pointer;
     }
+
+    img:nth-child(1) {
+        display: none;
+    }
+
+    @media (max-width: 800px) {
+        padding: 32px 36px;
+
+        img:nth-child(1) {
+            display: block;
+            margin-right: 42px;
+        }
+    }
 `
-export const NavLinkContainerStyles = styled.div`
+
+export const LeftHeaderStyles = styled.div`
+    display: flex;
+    align-items: center;
+`
+
+export const NavLinkContainerStyles = styled.ul`
     display: flex;
     gap: 34px;
+
+    li {
+        list-style: none;
+    }
+
+  @media (max-width: 800px) {
+    display: none;
+  }
 `
+
 export const NavLink = styled.a`
     cursor: pointer;
     color: #FFF;
     text-transform: uppercase;
+    text-decoration: none;
 
     ${SubTitle} {
         color: #FFF;
