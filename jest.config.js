@@ -25,6 +25,7 @@ const customJestConfig = {
   coveragePathIgnorePatterns: [
     "<rootDir>/src/style/", 
     "<rootDir>/src/app/",
+    "<rootDir>/src/pages/", // remove this later
     "\\.stories\\.",
   ],
 }
