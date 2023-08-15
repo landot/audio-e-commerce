@@ -7,7 +7,7 @@ function CustomButton(props: {
     onClick?: () => void
 }) {
     return (
-        <StyledButton {...props.styles} onClick={props.onClick}>{props.label}</StyledButton>
+        <StyledButton $styles={props.styles} onClick={props.onClick}>{props.label}</StyledButton>
     )
 }
 
