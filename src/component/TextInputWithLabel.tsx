@@ -4,7 +4,7 @@ import { InputContainer, TitleAndError, Title, Error } from "@/style/TextInputWi
 export interface TextInputWithLabelProps {
     title: string;
     value: string;
-    onChange?: () => void;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
     error?: string;
 }
 
@@ -12,12 +12,12 @@ function TextInputWithLabel(props: TextInputWithLabelProps) {
     return (
         <InputContainer>
         <TitleAndError>
-          <Title>{props.title}</Title>
+          <Title aria-label={props.title}>{props.title}</Title>
           {props.error && (
               <Error>{props.error}</Error>
           )}
         </TitleAndError>
-        <StyledTextInput value={props.value} onChange={props.onChange}/>
+        <StyledTextInput aria-labelledby={props.title} value={props.value} onChange={props.onChange}/>
       </InputContainer>
     )
 }

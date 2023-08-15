@@ -12,7 +12,7 @@ export const TitleAndError = styled.div`
   margin-bottom: 8px;
 `;
 
-export const Title = styled.p`
+export const Title = styled.label`
   color: #000;
   font-size: 12px;
   font-weight: 700;

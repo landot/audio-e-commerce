@@ -1,12 +1,20 @@
-import StyledRadioInput from "@/style/RadioInput.styles";
+import { StyledRadioContainer } from "@/style/RadioInput.styles";
 
-export function RadioInput(props: { label: string, checked: boolean, handleClick?: () => void })  {
-    return (
-      <StyledRadioInput $checked={props.checked} onClick={props.handleClick}>
-        <input type="radio" checked={props.checked} onClick={props.handleClick} />
+export interface RadioInputProps {
+  label: string;
+  checked: boolean;
+  handleClick?: () => void;
+}
+
+function RadioInput(props: RadioInputProps)  {
+  return (
+    <StyledRadioContainer $checked={props.checked} onClick={props.handleClick}>
+      <input aria-label={props.label} type="radio" checked={props.checked} readOnly={true} />
+      <label aria-labelledby={props.label}>
         {props.label}
-      </StyledRadioInput>
-    );
-  };
+      </label>
+    </StyledRadioContainer>
+  );
+};
   
-  export default RadioInput;
+export default RadioInput;
