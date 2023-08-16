@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const BodText = styled.p`
+const BodyText = styled.p`
   color: #000;
   font-family: Manrope, sans-serif;
   font-size: 15px;
@@ -9,4 +9,4 @@ const BodText = styled.p`
   line-height: 25px;
 `;
 
-export default BodText;
+export default BodyText;
