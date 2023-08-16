@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import TextInputWithLabel, { TextInputWithLabelProps } from './TextInputWithLabel';
+import userEvent from '@testing-library/user-event';
 
 describe('TextInputWithLabel', () => {
   const mockProps: TextInputWithLabelProps = {
@@ -10,9 +11,7 @@ describe('TextInputWithLabel', () => {
   };
 
   const mockPropsWithError: TextInputWithLabelProps = {
-    title: 'Username',
-    value: '',
-    onChange: jest.fn(),
+    ...mockProps,
     error: 'error text'
   };
 
@@ -21,26 +20,26 @@ describe('TextInputWithLabel', () => {
 
     const titleLabel = screen.getByText('Username');
     const inputElement = screen.getByLabelText('Username');
-    const errorText = screen.getByText('error text');
+    const errorText = screen.getByLabelText('error text');
 
     expect(titleLabel).toBeInTheDocument();
     expect(inputElement).toBeInTheDocument();
     expect(errorText).toBeInTheDocument();
   });
 
-//   it('calls onChange when input value changes', () => {
-//     render(<TextInputWithLabel {...mockProps} />);
+  it('calls onChange when input value changes', async () => {
+    render(<TextInputWithLabel {...mockProps} />);
 
-//     const inputElement = screen.getByLabelText('Username') as HTMLInputElement;
-//     fireEvent.change(inputElement, { target: { value: 'new value' } });
+    const inputElement = screen.getByRole('textbox');
+    await userEvent.type(inputElement, 'a');
 
-//     expect(mockProps.onChange).toHaveBeenCalledTimes(1);
-//   });
+    expect(mockProps.onChange).toHaveBeenCalledTimes(1);
+  });
 
-//   it('does not display error message when error prop is not provided', () => {
-//     render(<TextInputWithLabel {...mockProps} error={undefined} />);
+  it('does not display error message when error prop is not provided', () => {
+    render(<TextInputWithLabel {...mockProps} error={undefined} />);
 
-//     const errorText = screen.queryByText('error text');
-//     expect(errorText).toBeNull();
-//   });
+    const errorText = screen.queryByLabelText('error text');
+    expect(errorText).toBeNull();
+  });
 });

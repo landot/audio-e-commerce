@@ -14,10 +14,10 @@ function TextInputWithLabel(props: TextInputWithLabelProps) {
         <TitleAndError>
           <Title aria-label={props.title}>{props.title}</Title>
           {props.error && (
-              <Error>{props.error}</Error>
+              <Error aria-label="error text">{props.error}</Error>
           )}
         </TitleAndError>
-        <StyledTextInput aria-labelledby={props.title} value={props.value} onChange={props.onChange}/>
+        <StyledTextInput aria-labelledby={props.title} value={props.value} onChange={props.onChange} role='textbox'/>
       </InputContainer>
     )
 }

@@ -1,5 +1,4 @@
 import { AddQuantityStyles, AddQuantityButtonStyles } from '@/style/AddQuantity.styles';
-import { SetStateAction } from 'react';
 
 export interface AddQuantityProps {
     quantity: number;

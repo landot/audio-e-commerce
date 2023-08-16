@@ -2,7 +2,14 @@
   "extends": [
     "next/core-web-vitals",
     "plugin:testing-library/react",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:@typescript-eslint/recommended"
   ],
-  "plugins": ["testing-library"]
+  "plugins": ["testing-library", "@typescript-eslint"],
+  "rules": {
+    "testing-library/no-await-sync-events": [
+      "error",
+      { "eventModules": ["fire-event"] }
+    ]
+  }
 }
