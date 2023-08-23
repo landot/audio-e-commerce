@@ -3,8 +3,9 @@ interface ButtonStyles {
     hoverTextColor: string;
     backgroundColor: string;
     hoverBackgroundColor: string;
-    borderColor: string;
-    hoverBorderColor: string;
+    borderColor?: string;
+    hoverBorderColor?: string;
+    width?: string;
   }
   
   export default ButtonStyles;
