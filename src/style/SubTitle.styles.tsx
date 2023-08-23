@@ -7,7 +7,7 @@ const SubTitle = styled.h2`
   font-style: normal;
   font-weight: 700;
   line-height: 25px;
-  letter-spacing: 0.929px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 `;
 
