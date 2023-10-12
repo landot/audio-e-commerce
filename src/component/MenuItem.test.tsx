@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Category from './Category';
+import Category from './MenuItem';
 import speakerImg from '../assets/shared/desktop/image-category-thumbnail-speakers.png';
 
 jest.mock('next/navigation', () => ({

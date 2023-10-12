@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Category from './Category';
+import MenuItem from './MenuItem';
 import speakerImg from '../assets/shared/desktop/image-category-thumbnail-speakers.png';
 
 const meta = {
-  title: 'Category',
-  component: Category,
+  title: 'MenuItem',
+  component: MenuItem,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof Category>;
+} satisfies Meta<typeof MenuItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

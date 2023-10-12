@@ -5,7 +5,7 @@ import Image, { StaticImageData } from 'next/image';
 import { CategoryStyles, CategoryContentStyles, CategoryLinkStyles, CategoryShadowStyles } from "@/style/Category.styles";
 import { useRouter } from "next/navigation";
 
-function Category(props: {
+function MenuItem(props: {
     img: StaticImageData, 
     name: string, 
     href: string
@@ -27,4 +27,4 @@ function Category(props: {
     )
 }
 
-export default Category;
+export default MenuItem;
