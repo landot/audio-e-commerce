@@ -2,7 +2,8 @@ import Image from 'next/image';
 import logo from "../assets/shared/desktop/logo.svg";
 import hamburger from "../assets/shared/tablet/icon-hamburger.svg";
 import { companyDescription } from "@/data/constant";
-import { Copyright, Description, FooterNavContainer, FooterStyles, Logo, SocialMediaContainer } from "@/style/Footer.styles";
+import { Copyright, Description, FooterNavContainer, FooterStyles, Logo, SocialMediaContainer, OrangeLine } from "@/style/Footer.styles";
+
 
 function Footer() {
     return (
@@ -24,11 +25,12 @@ function Footer() {
             <FooterNavContainer>
                 <ul>
                     <li role='link'>Home</li>
-                    <li role='link'>Home</li>
-                    <li role='link'>Home</li>
-                    <li role='link'>Home</li>
+                    <li role='link'>Headphones</li>
+                    <li role='link'>Speakers</li>
+                    <li role='link'>Earphones</li>
                 </ul>
             </FooterNavContainer>
+            <OrangeLine />
         </FooterStyles>
     )
 }

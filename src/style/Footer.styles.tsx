@@ -6,6 +6,9 @@ export const FooterStyles = styled.footer`
 display: grid;
 width: 100%;
 height: fit-content;
+background: #101010;
+padding: 75px 165px 48px 165px;
+position: relative;
 
 grid-template-columns: 1fr 1fr;
 grid-template-rows: fit-content;
@@ -90,4 +93,13 @@ export const FooterNavContainer = styled.div`
             flex-direction: column;
         }
     }
+`
+
+export const OrangeLine = styled.div`
+    width: 101px;
+    height: 4px;
+    flex-shrink: 0;
+    background: #D87D4A;
+    position: absolute;
+    left: 165px;
 `
