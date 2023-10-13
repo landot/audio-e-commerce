@@ -9,16 +9,19 @@ import { CategoryItemStyles, CategoryItemImageStyles, CategoryItemImageBackgroun
 import useWindowSize from '@/hooks/useWindowSize';
 import Link from "next/link";
 
-function CategoryItem(props: {
-    img: StaticImageData, 
-    newProduct: boolean,
-    name: string, 
-    description: string,
-    href: string
-}) {
+export interface CategoryItemProps {
+    img: StaticImageData;
+    newProduct: boolean;
+    name: string;
+    description: string;
+    href: string;
+    reverse?: boolean;
+}
+
+function CategoryItem({ reverse = false, ...props }: CategoryItemProps) {
     const size = useWindowSize();
     return (
-        <CategoryItemStyles>
+        <CategoryItemStyles $reverse={reverse} role="listitem">
             <CategoryItemImageStyles>
                 <Image src={props.img} alt={`${props.name} image`}/>
                 <CategoryItemImageBackgroundStyles />
@@ -40,6 +43,5 @@ function CategoryItem(props: {
         </CategoryItemStyles>
     )
 }
-
 
 export default CategoryItem;

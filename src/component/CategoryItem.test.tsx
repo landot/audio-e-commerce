@@ -5,7 +5,7 @@ import headphones from '../assets/product-xx99-mark-one-headphones/desktop/image
 
 describe('CategoryItem Component', () => {
   const newProductProps = {
-    img: headphones, // Replace with the actual image path
+    img: headphones,
     newProduct: true,
     name: 'Sample Product',
     description: 'This is a sample product description.',

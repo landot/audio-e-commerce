@@ -4,9 +4,13 @@ import Overline from "./Overline.styles"
 import { StyledButton } from "./StyledButton.styles"
 import StyledH2 from "./StyledH2.styles"
 
-export const CategoryItemStyles = styled.div`
+interface CategoryItemStylesProps {
+    $reverse: boolean;
+}
+
+export const CategoryItemStyles = styled.div<CategoryItemStylesProps>`
     display: flex;
-    flex-direction: row;
+    flex-direction: ${props => props.$reverse ? 'row-reverse' : 'row'};
     gap: 125px;
 
     @media (max-width: 800px) {
