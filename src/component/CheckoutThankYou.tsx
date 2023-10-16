@@ -10,14 +10,7 @@ import StyledH6 from "@/style/StyledH6.styles";
 import Link from "next/link";
 import CartItem, { CartItemData } from "./CartItem";
 import { ThankYouDialogStyles, ProductSummaryStyles, ProductSectionStyles, GrandTotalStyles } from "@/style/CheckoutThankYou.styles";
-
-export function calculateTotal(items: CartItemData[]) {
-    let total = 0;
-    items.forEach(item => {
-        total += item.price * item.quantity
-    })
-    return total
-}
+import { calculateTotal } from "@/utils/calculateTotal";
 
 function CheckoutThankYou(props: {
     order: CartItemData[], 
