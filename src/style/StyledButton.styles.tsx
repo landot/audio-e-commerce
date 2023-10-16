@@ -6,7 +6,7 @@ export const StyledButton = styled.button<{$styles: ButtonStyles}>`
   padding: 15px 30px;
 
   text-transform: uppercase;
-  width: ${props => props.$styles.borderColor ? props.$styles.borderColor: 'fit-content'};
+  width: ${props => props.$styles.width ? props.$styles.width: 'fit-content'};
   color: ${props => props.$styles.textColor};
   background-color: ${props => props.$styles.backgroundColor};
   border: ${props => props.$styles.borderColor ? `1px solid ${props.$styles.borderColor}`: 'none'};

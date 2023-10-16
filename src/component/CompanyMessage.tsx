@@ -3,7 +3,6 @@ import StyledH2 from "@/style/StyledH2.styles";
 import bestGearDesktop from '../assets/shared/desktop/image-best-gear.jpg';
 import bestGearTablet from '../assets/shared/tablet/image-best-gear.jpg';
 import bestGearMobile from '../assets/shared/mobile/image-best-gear.jpg';
-
 import Image from 'next/image';
 import { CompanyMessageContainerStyles, CompanyMessageImageStyles, CompanyMessageStyles, Orange } from "@/style/CompanyMessage.styles";
 import useWindowSize from "@/hooks/useWindowSize";
