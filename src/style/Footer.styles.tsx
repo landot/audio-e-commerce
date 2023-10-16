@@ -26,6 +26,7 @@ ${BodyText} {
 }
 
 @media (max-width: 800px) {
+    padding: 60px 40px 48px 40px;
     grid-template-areas:
         "logo logo"
         "footerNavbar footerNavbar"
@@ -34,6 +35,7 @@ ${BodyText} {
 }
 
 @media (max-width: 500px) {
+    padding: 48px 20px 38px 20px;
     grid-template-columns: 1fr;
     grid-template-areas:
         "logo"
