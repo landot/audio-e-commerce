@@ -21,14 +21,14 @@ export const ProductDetailStyles = styled.div`
     }
 `
 
-export const ProductInfoStyles = styled.div`
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-`
-
 export const ProductDetailContentStyles = styled.div`
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const ProductInfoStyles = styled.div`
+    width: 100%;
 `

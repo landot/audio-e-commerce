@@ -8,9 +8,9 @@ export interface AddQuantityProps {
 function AddQuantity(props: AddQuantityProps) {
     return (
         <AddQuantityStyles>
-            <AddQuantityButtonStyles onClick={() => props.handleIncrement(props.quantity > 0 ? -1: 0)}>-</AddQuantityButtonStyles>
+            <AddQuantityButtonStyles role='button' onClick={() => props.handleIncrement(props.quantity > 0 ? -1: 0)}>-</AddQuantityButtonStyles>
             <p>{props.quantity}</p>
-            <AddQuantityButtonStyles onClick={() => props.handleIncrement(1)}>+</AddQuantityButtonStyles>
+            <AddQuantityButtonStyles role='button' onClick={() => props.handleIncrement(1)}>+</AddQuantityButtonStyles>
         </AddQuantityStyles>
     )
 }

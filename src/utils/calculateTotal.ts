@@ -1,4 +1,4 @@
-import { CartItemData } from "@/component/CartItem";
+import { CartItemData } from "@/component/StaticCartItem";
 
 export function calculateTotal(items: CartItemData[]) {
     let total = 0;

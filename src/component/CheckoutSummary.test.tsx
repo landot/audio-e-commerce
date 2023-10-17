@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { CartItemData } from './CartItem';
+import { CartItemData } from './StaticCartItem';
 import CheckoutSummary from './CheckoutSummary';
 import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.jpg";
 
@@ -37,7 +37,7 @@ describe('CheckoutSummary Component', () => {
         />
     );
 
-    expect(screen.getAllByTestId('cart-item')).toHaveLength(3);
+    expect(screen.getAllByTestId('static-cart-item')).toHaveLength(3);
     // total
     expect(screen.getByText('$ 10'))
     // shipping

@@ -1,6 +1,6 @@
 import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { CartItemData } from './CartItem';
+import { CartItemData } from './StaticCartItem';
 import CheckoutThankYou from './CheckoutThankYou';
 import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.jpg";
 
@@ -69,7 +69,7 @@ describe('CheckoutThankYou Component', () => {
     const expandItemsButton = screen.getByTestId('expand-items');
     fireEvent.click(expandItemsButton);
 
-    expect(screen.queryAllByTestId('cart-item')).toHaveLength(3);
+    expect(screen.queryAllByTestId('static-cart-item')).toHaveLength(3);
   });
 
   it('total price renders correctly', () => {

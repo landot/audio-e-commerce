@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CartItem, { CartItemData } from './CartItem';
+import CartItem, { CartItemData } from './StaticCartItem';
 import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.jpg";
 
 describe('CartItem Component', () => {

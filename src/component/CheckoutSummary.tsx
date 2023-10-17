@@ -4,7 +4,7 @@ import { Orange } from "@/style/CompanyMessage.styles";
 import StyledH6 from "@/style/StyledH6.styles";
 import { calculateTotal } from "@/utils/calculateTotal";
 import styled from "styled-components";
-import CartItem, { CartItemData } from "./CartItem";
+import CartItem, { CartItemData } from "./StaticCartItem";
 import CustomButton from "./CustomButton";
 
 export const CartItemStyles = styled.div`

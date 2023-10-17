@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import CartItem from './CartItem';
+import StaticCartItem from './StaticCartItem';
 import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.jpg";
 
 const meta = {
-  title: 'CartItem',
-  component: CartItem,
+  title: 'StaticCartItem',
+  component: StaticCartItem,
   tags: ['autodocs'],
   argTypes: {},
-} satisfies Meta<typeof CartItem>;
+} satisfies Meta<typeof StaticCartItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

@@ -8,7 +8,7 @@ import Image from 'next/image';
 import checkOutIcon from '../assets/checkout/icon-order-confirmation.svg';
 import StyledH6 from "@/style/StyledH6.styles";
 import Link from "next/link";
-import CartItem, { CartItemData } from "./CartItem";
+import CartItem, { CartItemData } from "./StaticCartItem";
 import { ThankYouDialogStyles, ProductSummaryStyles, ProductSectionStyles, GrandTotalStyles } from "@/style/CheckoutThankYou.styles";
 import { calculateTotal } from "@/utils/calculateTotal";
 
