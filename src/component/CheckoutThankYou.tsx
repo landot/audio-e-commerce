@@ -29,7 +29,7 @@ function CheckoutThankYou(props: {
             <ThankYouDialogStyles>
                 <Image src={checkOutIcon} alt={"check-mark icon"}></Image>
                 <StyledH3>Thank you for your order</StyledH3>
-                <BodyText opacity={.5}>You will receive an email confirmation shortly.</BodyText>
+                <BodyText $opacity={.5}>You will receive an email confirmation shortly.</BodyText>
                 <ProductSummaryStyles>
                     <ProductSectionStyles>
                         <CartItem {...props.order[0]}/>
@@ -46,7 +46,7 @@ function CheckoutThankYou(props: {
                                 }
                                 <Divider />
                                 <button data-testid='hide-items' onClick={toggleExpandDetails}>
-                                    <BodyText opacity={.5}>show less</BodyText>
+                                    <BodyText $opacity={.5}>show less</BodyText>
                                 </button>
                             </>
                         )}
@@ -54,13 +54,13 @@ function CheckoutThankYou(props: {
                             <>
                                 <Divider />
                                 <button data-testid='expand-items' onClick={toggleExpandDetails}>
-                                <BodyText opacity={.5}>and {props.order.length - 1} other item(s)</BodyText>
+                                <BodyText $opacity={.5}>and {props.order.length - 1} other item(s)</BodyText>
                                 </button>
                             </>
                         )}
                     </ProductSectionStyles>
                     <GrandTotalStyles>
-                        <BodyText opacity={.5}>Grand Total</BodyText>
+                        <BodyText $opacity={.5}>Grand Total</BodyText>
                         <StyledH6 data-testid='total-cost'>
                             $ {calculateTotal(props.order)}
                         </StyledH6>

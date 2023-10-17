@@ -16,7 +16,7 @@ export function EditableCartItem(props: EditableCartItemProps) {
             <Image src={props.item.img} alt={"product image"} />
             <ProductInfoStyles>
                 <BodyText>{props.item.name}</BodyText>
-                <BodyText opacity={.5}>$ {props.item.price}</BodyText>
+                <BodyText $opacity={.5}>$ {props.item.price}</BodyText>
             </ProductInfoStyles>
             </ProductDetailContentStyles>
         <AddQuantity quantity={props.item.quantity} handleIncrement={props.handleCountChange} />

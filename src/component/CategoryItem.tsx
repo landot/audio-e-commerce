@@ -35,7 +35,7 @@ function CategoryItem({ reverse = false, ...props }: CategoryItemProps) {
                 ): (
                     <StyledH4>{props.name}</StyledH4>
                 )}
-                <BodyText opacity={.5}>{props.description}</BodyText>
+                <BodyText $opacity={.5}>{props.description}</BodyText>
                 <Link href={props.href}>
                     <CustomButton label={'See Product'} styles={orangeButtonStyles}></CustomButton>
                 </Link>

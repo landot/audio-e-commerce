@@ -16,10 +16,10 @@ export function StaticCartItem(props: CartItemData) {
             <Image src={props.img} alt={"product image"} />
             <ProductInfoStyles>
                 <BodyText>{props.name}</BodyText>
-                <BodyText opacity={.5}>$ {props.price}</BodyText>
+                <BodyText $opacity={.5}>$ {props.price}</BodyText>
             </ProductInfoStyles>
             </ProductDetailContentStyles>
-            <BodyText opacity={.5}>x{props.quantity}</BodyText>
+            <BodyText $opacity={.5}>x{props.quantity}</BodyText>
     </ProductDetailStyles>
     )
 }
