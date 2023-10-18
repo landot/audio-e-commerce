@@ -7,7 +7,7 @@ import CartItem, { CartItemData } from "./StaticCartItem";
 import CustomButton from "./CustomButton";
 import { CheckoutSummaryStyles, InvoiceStyles, CartItemStyles } from "@/style/CheckoutSummary.styles";
 
- function CheckoutSummary(props: {
+function CheckoutSummary(props: {
     order: CartItemData[],
     shipping: number,
     vat: number,
@@ -50,6 +50,6 @@ import { CheckoutSummaryStyles, InvoiceStyles, CartItemStyles } from "@/style/Ch
             />
         </CheckoutSummaryStyles>
     )
- }
+}
 
- export default CheckoutSummary;
+export default CheckoutSummary;

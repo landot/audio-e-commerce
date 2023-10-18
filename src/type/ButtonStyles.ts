@@ -8,4 +8,4 @@ interface ButtonStyles {
     width?: string;
   }
   
-  export default ButtonStyles;
+export default ButtonStyles;

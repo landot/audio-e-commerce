@@ -11,12 +11,12 @@ describe('CartItem Component', () => {
         quantity: 3
     }
 
-  it('renders product details correctly', () => {
-    render(<CartItem {...cartItemProps} />);
+    it('renders product details correctly', () => {
+        render(<CartItem {...cartItemProps} />);
 
-    expect(screen.getByAltText('product image')).toBeInTheDocument();
-    expect(screen.getByText(cartItemProps.name)).toBeInTheDocument();
-    expect(screen.getByText('x3')).toBeInTheDocument();
-    expect(screen.getByText('$ 10')).toBeInTheDocument();
-  });
+        expect(screen.getByAltText('product image')).toBeInTheDocument();
+        expect(screen.getByText(cartItemProps.name)).toBeInTheDocument();
+        expect(screen.getByText('x3')).toBeInTheDocument();
+        expect(screen.getByText('$ 10')).toBeInTheDocument();
+    });
 });

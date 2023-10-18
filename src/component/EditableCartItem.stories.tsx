@@ -3,16 +3,16 @@ import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.j
 import EditableCartItem from './EditableCartItem';
 
 const meta = {
-  title: 'EditableCartItem',
-  component: EditableCartItem,
-  tags: ['autodocs'],
-  argTypes: {},
+    title: 'EditableCartItem',
+    component: EditableCartItem,
+    tags: ['autodocs'],
+    argTypes: {},
 } satisfies Meta<typeof EditableCartItem>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
-  args: {
+    args: {
         item: {
             name: 'XX99 MK II',
             price: 2999,

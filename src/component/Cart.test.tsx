@@ -21,23 +21,23 @@ describe('Cart Component', () => {
             },
         ];
 
-  it('renders items in cart', () => {
-    render(<Cart items={cartItemProps} />);
-    expect(screen.getAllByTestId('editable-cart-item')).toHaveLength(2);
-    expect(screen.getByText('Cart (2)')).toBeInTheDocument();
-  });
+    it('renders items in cart', () => {
+        render(<Cart items={cartItemProps} />);
+        expect(screen.getAllByTestId('editable-cart-item')).toHaveLength(2);
+        expect(screen.getByText('Cart (2)')).toBeInTheDocument();
+    });
 
 
-  it('cart renders with no items in cart', () => {
-    render(<Cart items={[]} />);
-    expect(screen.queryByTestId('editable-cart-item')).not.toBeInTheDocument();
-  });
+    it('cart renders with no items in cart', () => {
+        render(<Cart items={[]} />);
+        expect(screen.queryByTestId('editable-cart-item')).not.toBeInTheDocument();
+    });
 
-//   todo
-//   it('clicking checkout redirects to checkout page', () => {
-//     render(<Cart items={[]} />);
-//     expect(screen.queryByTestId('editable-cart-item')).not.toBeTruthy();
-//   });
+    //   todo
+    //   it('clicking checkout redirects to checkout page', () => {
+    //     render(<Cart items={[]} />);
+    //     expect(screen.queryByTestId('editable-cart-item')).not.toBeTruthy();
+    //   });
 
 //   todo
 //   it('clicking remove all button clears the cart', () => {

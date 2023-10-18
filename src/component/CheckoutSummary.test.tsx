@@ -26,40 +26,40 @@ describe('CheckoutSummary Component', () => {
         },
     ]
 
-  it('renders correctly', async () => {
-    const mockContinue = jest.fn();
-    render(
-        <CheckoutSummary 
-            order={...checkoutThankYouProps} 
-            shipping={25} 
-            vat={100} 
-            handleContinue={mockContinue}
-        />
-    );
+    it('renders correctly', async () => {
+        const mockContinue = jest.fn();
+        render(
+            <CheckoutSummary 
+                order={...checkoutThankYouProps} 
+                shipping={25} 
+                vat={100} 
+                handleContinue={mockContinue}
+            />
+        );
 
-    expect(screen.getAllByTestId('static-cart-item')).toHaveLength(3);
-    // total
-    expect(screen.getByText('$ 10'))
-    // shipping
-    expect(screen.getByText('$ 25'))
-    // vat
-    expect(screen.getByText('$ 100'))
-    // grand total
-    expect(screen.getByText('$ 135'))
+        expect(screen.getAllByTestId('static-cart-item')).toHaveLength(3);
+        // total
+        expect(screen.getByText('$ 10'))
+        // shipping
+        expect(screen.getByText('$ 25'))
+        // vat
+        expect(screen.getByText('$ 100'))
+        // grand total
+        expect(screen.getByText('$ 135'))
 
-  });
+    });
 
-  it('Clicking continue calls handleContinue prop', async () => {
-    const mockContinue = jest.fn();
-    render(
-        <CheckoutSummary 
-            order={...checkoutThankYouProps} 
-            shipping={25} 
-            vat={100} 
-            handleContinue={mockContinue}
-        />
-    );
-    fireEvent.click(screen.getByRole('button'));
-    expect(mockContinue).toHaveBeenCalled();
-  });
+    it('Clicking continue calls handleContinue prop', async () => {
+        const mockContinue = jest.fn();
+        render(
+            <CheckoutSummary 
+                order={...checkoutThankYouProps} 
+                shipping={25} 
+                vat={100} 
+                handleContinue={mockContinue}
+            />
+        );
+        fireEvent.click(screen.getByRole('button'));
+        expect(mockContinue).toHaveBeenCalled();
+    });
 });

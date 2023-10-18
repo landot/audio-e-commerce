@@ -7,6 +7,7 @@
   ],
   "plugins": ["testing-library", "@typescript-eslint"],
   "rules": {
+    "indent": ["error", 4],
     "testing-library/no-await-sync-events": [
       "error",
       { "eventModules": ["fire-event"] }

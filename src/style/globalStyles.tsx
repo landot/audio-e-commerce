@@ -1,16 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
 
 const theme = {
-  colors: {
-    primary: '#D87D4A',
-    secondary: '#101010',
-    lightGray: '#F1F1F1',
-    offWhite: '#FAFAFA',
-    accent: '#FBAF85',
-    white: '#FFF',
-    black: '#000',
-  },
-  fontFamily: 'Manrope, sans-serif',
+    colors: {
+        primary: '#D87D4A',
+        secondary: '#101010',
+        lightGray: '#F1F1F1',
+        offWhite: '#FAFAFA',
+        accent: '#FBAF85',
+        white: '#FFF',
+        black: '#000',
+    },
+    fontFamily: 'Manrope, sans-serif',
 };
 
 export const GlobalStyle = createGlobalStyle`

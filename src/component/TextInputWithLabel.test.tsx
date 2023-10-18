@@ -4,42 +4,42 @@ import TextInputWithLabel, { TextInputWithLabelProps } from './TextInputWithLabe
 import userEvent from '@testing-library/user-event';
 
 describe('TextInputWithLabel', () => {
-  const mockProps: TextInputWithLabelProps = {
-    title: 'Username',
-    value: '',
-    onChange: jest.fn(),
-  };
+    const mockProps: TextInputWithLabelProps = {
+        title: 'Username',
+        value: '',
+        onChange: jest.fn(),
+    };
 
-  const mockPropsWithError: TextInputWithLabelProps = {
-    ...mockProps,
-    error: 'error text'
-  };
+    const mockPropsWithError: TextInputWithLabelProps = {
+        ...mockProps,
+        error: 'error text'
+    };
 
-  it('renders input with title and error', () => {
-    render(<TextInputWithLabel {...mockPropsWithError} />);
+    it('renders input with title and error', () => {
+        render(<TextInputWithLabel {...mockPropsWithError} />);
 
-    const titleLabel = screen.getByText('Username');
-    const inputElement = screen.getByLabelText('Username');
-    const errorText = screen.getByLabelText('error text');
+        const titleLabel = screen.getByText('Username');
+        const inputElement = screen.getByLabelText('Username');
+        const errorText = screen.getByLabelText('error text');
 
-    expect(titleLabel).toBeInTheDocument();
-    expect(inputElement).toBeInTheDocument();
-    expect(errorText).toBeInTheDocument();
-  });
+        expect(titleLabel).toBeInTheDocument();
+        expect(inputElement).toBeInTheDocument();
+        expect(errorText).toBeInTheDocument();
+    });
 
-  it('calls onChange when input value changes', async () => {
-    render(<TextInputWithLabel {...mockProps} />);
+    it('calls onChange when input value changes', async () => {
+        render(<TextInputWithLabel {...mockProps} />);
 
-    const inputElement = screen.getByRole('textbox');
-    await userEvent.type(inputElement, 'a');
+        const inputElement = screen.getByRole('textbox');
+        await userEvent.type(inputElement, 'a');
 
-    expect(mockProps.onChange).toHaveBeenCalledTimes(1);
-  });
+        expect(mockProps.onChange).toHaveBeenCalledTimes(1);
+    });
 
-  it('does not display error message when error prop is not provided', () => {
-    render(<TextInputWithLabel {...mockProps} error={undefined} />);
+    it('does not display error message when error prop is not provided', () => {
+        render(<TextInputWithLabel {...mockProps} error={undefined} />);
 
-    const errorText = screen.queryByLabelText('error text');
-    expect(errorText).toBeNull();
-  });
+        const errorText = screen.queryByLabelText('error text');
+        expect(errorText).toBeNull();
+    });
 });

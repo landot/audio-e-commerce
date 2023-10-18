@@ -11,14 +11,14 @@ export interface TextInputWithLabelProps {
 function TextInputWithLabel(props: TextInputWithLabelProps) {
     return (
         <InputContainer>
-        <TitleAndError>
-          <Title aria-label={props.title}>{props.title}</Title>
-          {props.error && (
-              <Error aria-label="error text">{props.error}</Error>
-          )}
-        </TitleAndError>
-        <StyledTextInput aria-labelledby={props.title} value={props.value} onChange={props.onChange} role='textbox'/>
-      </InputContainer>
+            <TitleAndError>
+                <Title aria-label={props.title}>{props.title}</Title>
+                {props.error && (
+                    <Error aria-label="error text">{props.error}</Error>
+                )}
+            </TitleAndError>
+            <StyledTextInput aria-labelledby={props.title} value={props.value} onChange={props.onChange} role='textbox'/>
+        </InputContainer>
     )
 }
 

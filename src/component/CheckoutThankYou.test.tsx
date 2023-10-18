@@ -26,62 +26,62 @@ describe('CheckoutThankYou Component', () => {
         },
     ]
 
-  it('clicking outside calls the hideModal function', async () => {
-    const mockHide = jest.fn();
-    render(
-        <CheckoutThankYou 
-            order={...checkoutThankYouProps} 
-            showModal={true} 
-            hideModal={mockHide} 
-        />
-    );
+    it('clicking outside calls the hideModal function', async () => {
+        const mockHide = jest.fn();
+        render(
+            <CheckoutThankYou 
+                order={...checkoutThankYouProps} 
+                showModal={true} 
+                hideModal={mockHide} 
+            />
+        );
 
-    expect(screen.getByRole('dialog')).toBeInTheDocument();
-    const backdrop = screen.getAllByRole('presentation')[0].firstChild!;
-    fireEvent.click(backdrop);
-    expect(mockHide).toHaveBeenCalled();
-  });
+        expect(screen.getByRole('dialog')).toBeInTheDocument();
+        const backdrop = screen.getAllByRole('presentation')[0].firstChild!;
+        fireEvent.click(backdrop);
+        expect(mockHide).toHaveBeenCalled();
+    });
 
-  it('modal is hidden when showModal=false', () => {
-    const mockHide = jest.fn();
-    render(
-        <CheckoutThankYou 
-            order={...checkoutThankYouProps} 
-            showModal={false} 
-            hideModal={mockHide} 
-        />
-    );
+    it('modal is hidden when showModal=false', () => {
+        const mockHide = jest.fn();
+        render(
+            <CheckoutThankYou 
+                order={...checkoutThankYouProps} 
+                showModal={false} 
+                hideModal={mockHide} 
+            />
+        );
 
-    expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
-  });
+        expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
+    });
 
 
-  it('cart details can be expanded', () => {
-    const mockHide = jest.fn();
-    render(
-        <CheckoutThankYou 
-            order={...checkoutThankYouProps} 
-            showModal={true} 
-            hideModal={mockHide} 
-        />
-    );
+    it('cart details can be expanded', () => {
+        const mockHide = jest.fn();
+        render(
+            <CheckoutThankYou 
+                order={...checkoutThankYouProps} 
+                showModal={true} 
+                hideModal={mockHide} 
+            />
+        );
 
-    const expandItemsButton = screen.getByTestId('expand-items');
-    fireEvent.click(expandItemsButton);
+        const expandItemsButton = screen.getByTestId('expand-items');
+        fireEvent.click(expandItemsButton);
 
-    expect(screen.queryAllByTestId('static-cart-item')).toHaveLength(3);
-  });
+        expect(screen.queryAllByTestId('static-cart-item')).toHaveLength(3);
+    });
 
-  it('total price renders correctly', () => {
-    const mockHide = jest.fn();
-    render(
-        <CheckoutThankYou 
-            order={...checkoutThankYouProps} 
-            showModal={true} 
-            hideModal={mockHide} 
-        />
-    );
+    it('total price renders correctly', () => {
+        const mockHide = jest.fn();
+        render(
+            <CheckoutThankYou 
+                order={...checkoutThankYouProps} 
+                showModal={true} 
+                hideModal={mockHide} 
+            />
+        );
 
-    expect(screen.getByTestId('total-cost').textContent).toBe('$ 10');
-  });
+        expect(screen.getByTestId('total-cost').textContent).toBe('$ 10');
+    });
 });

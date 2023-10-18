@@ -7,14 +7,14 @@ export interface RadioInputProps {
 }
 
 function RadioInput(props: RadioInputProps)  {
-  return (
-    <StyledRadioContainer $checked={props.checked} onClick={props.handleClick}>
-      <input aria-label={props.label} type="radio" checked={props.checked} readOnly={true} />
-      <label aria-labelledby={props.label}>
-        {props.label}
-      </label>
-    </StyledRadioContainer>
-  );
+    return (
+        <StyledRadioContainer $checked={props.checked} onClick={props.handleClick}>
+            <input aria-label={props.label} type="radio" checked={props.checked} readOnly={true} />
+            <label aria-labelledby={props.label}>
+                {props.label}
+            </label>
+        </StyledRadioContainer>
+    );
 };
   
 export default RadioInput;

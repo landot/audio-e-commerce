@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Promotion from './Promotion';
+import CheckoutPayment from './CheckoutPayment';
 
 const meta = {
-    title: 'Promotion',
-    component: Promotion,
+    title: 'CheckoutPayment',
+    component: CheckoutPayment,
     tags: ['autodocs'],
     argTypes: {},
-} satisfies Meta<typeof Promotion>;
+} satisfies Meta<typeof CheckoutPayment>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -14,4 +14,3 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
     args: {},
 };
-

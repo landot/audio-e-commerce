@@ -3,10 +3,10 @@ import CategoryList from './CategoryList';
 import headphones from '../assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg';
 
 const meta = {
-  title: 'CategoryList',
-  component: CategoryList,
-  tags: ['autodocs'],
-  argTypes: {},
+    title: 'CategoryList',
+    component: CategoryList,
+    tags: ['autodocs'],
+    argTypes: {},
 } satisfies Meta<typeof CategoryList>;
 
 export default meta;

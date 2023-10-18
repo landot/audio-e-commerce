@@ -28,9 +28,9 @@ function Cart(props: {
                 <BodyText $fontWeight={700}>$ {calculateTotal(props.items)}</BodyText>
             </TotalStyles>
             <CustomButton label={"Checkout"} styles={{
-                    ...orangeButtonStyles,
-                    width: '100%'
-                }} 
+                ...orangeButtonStyles,
+                width: '100%'
+            }} 
             />
         </CartStyles>
     )

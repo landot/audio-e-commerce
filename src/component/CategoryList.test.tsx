@@ -24,9 +24,9 @@ describe('CategoryList Component', () => {
         },
     ];
 
-  it('items are reversed', () => {
-    render(<CategoryList categoryItems={...CategoryListProps} />);
-    const listItems = screen.getAllByRole('listitem');
-    expect(listItems.length).toBe(2);
-  });
+    it('items are reversed', () => {
+        render(<CategoryList categoryItems={...CategoryListProps} />);
+        const listItems = screen.getAllByRole('listitem');
+        expect(listItems.length).toBe(2);
+    });
 });

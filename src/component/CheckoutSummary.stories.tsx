@@ -3,10 +3,10 @@ import CheckoutSummary from './CheckoutSummary';
 import imageIcon from "../assets/product-xx59-headphones/desktop/image-product.jpg";
 
 const meta = {
-  title: 'CheckoutSummary',
-  component: CheckoutSummary,
-  tags: ['autodocs'],
-  argTypes: {},
+    title: 'CheckoutSummary',
+    component: CheckoutSummary,
+    tags: ['autodocs'],
+    argTypes: {},
 } satisfies Meta<typeof CheckoutSummary>;
 
 export default meta;
