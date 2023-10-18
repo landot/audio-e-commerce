@@ -1,7 +1,12 @@
 import styled from "styled-components";
 
-const StyledH1 = styled.h1`
-    color: #000;
+interface HeaderProps {
+    $color?: string;
+  }
+
+  
+const StyledH1 = styled.h1<HeaderProps>`
+    color: ${(props) => (props.$color ? props.$color : '#000')};
     font-family: inherit;
     font-size: 56px;
     font-style: normal;
