@@ -7,6 +7,7 @@ export const HeaderStyles = styled.nav`
     padding: 35px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     img {
         cursor: pointer;
@@ -34,9 +35,14 @@ export const LeftHeaderStyles = styled.div`
 export const NavLinkContainerStyles = styled.ul`
     display: flex;
     gap: 34px;
+    margin: 0;
 
     li {
         list-style: none;
+    }
+
+    h2 {
+        margin: 0;
     }
 
   @media (max-width: 800px) {

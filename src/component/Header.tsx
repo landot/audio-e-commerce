@@ -15,7 +15,6 @@ function Header(props: HeaderProps) {
                 <Image src={logo} alt={'Click logo to go to home page'} />
             </LeftHeaderStyles>
             <NavLinkContainerStyles>
-                {/* TODO add valid hrefs after pages are working */}
                 <li>
                     <NavLink href='/'><SubTitle>Home</SubTitle></NavLink>
                 </li>
