@@ -9,7 +9,7 @@ import { HeaderStyles, NavLinkContainerStyles, NavLink, LeftHeaderStyles } from 
 
 function Header(props: HeaderProps) {
     return (
-        <HeaderStyles>
+        <HeaderStyles role='menubar'>
             <LeftHeaderStyles>
                 <Image src={hamburger} alt={'Click to expand hamburger menu'} />
                 <Image src={logo} alt={'Click logo to go to home page'} />

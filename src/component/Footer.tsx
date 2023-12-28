@@ -7,7 +7,7 @@ import { Copyright, Description, FooterNavContainer, FooterStyles, Logo, SocialM
 
 function Footer() {
     return (
-        <FooterStyles>
+        <FooterStyles role='contentinfo'>
             <Logo src={logo} alt={"audiophile logo"} />
             <Description>{companyDescription}</Description>
             <Copyright>Copyright 2021. All Rights Reserved</Copyright>
