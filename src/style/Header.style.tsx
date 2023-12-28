@@ -2,6 +2,7 @@ import styled from "styled-components"
 import SubTitle from "./SubTitle.styles";
 
 export const HeaderStyles = styled.nav`
+    background: #0E0E0E;
     width: 100%;
     padding: 35px 0;
     display: flex;

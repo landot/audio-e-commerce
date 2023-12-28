@@ -11,6 +11,7 @@ function Promotion() {
     return (
         <PromotionStyles>
             <ZX9SpeakerPromotion>
+                {/* TODO way too big */}
                 <SpeakerImageContainer1>
                     <Image src={speakerImage1} alt={"ZX9 Speaker Image"} layout='responsive' objectFit="cover"/>
                 </SpeakerImageContainer1>
@@ -25,6 +26,7 @@ function Promotion() {
                 <CustomButton label={"See Product"} styles={clearButtonStyles} />
             </ZX7SpeakerPromotion>
             <EarphonePromotion>
+                {/* TODO image not showing on large */}
                 <EarphoneImage />
                 <EarphoneDetails>
                     <StyledH4>YX1 Earphones</StyledH4>

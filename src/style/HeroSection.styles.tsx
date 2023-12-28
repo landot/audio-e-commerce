@@ -10,7 +10,7 @@ export const HeroSectionContainerStyles = styled.div`
     height: 400px;
     padding: 10px;
     position: relative;
-    background: #191919;
+    background: #0E0E0E;
     display: flex;
 
     ${Overline} {

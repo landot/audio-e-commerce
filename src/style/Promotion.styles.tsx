@@ -11,7 +11,6 @@ import StyledH1 from './StyledH1.styles';
 
 export const PromotionStyles = styled.div`
     width: 100%;
-    max-width: 1000px;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -20,7 +19,7 @@ export const PromotionStyles = styled.div`
 export const ZX9SpeakerPromotion = styled.div`
     padding: 80px;
     width: 100%;
-    height: fit-content;
+    height: 560px;
     border-radius: 8px;
     background: #D87D4A;
     display: flex;
@@ -40,6 +39,7 @@ export const ZX9SpeakerPromotion = styled.div`
 `
 
 export const SpeakerImageContainer1 = styled.div`
+    display: flex;
     width: 50%;
 `
 

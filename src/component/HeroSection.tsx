@@ -19,6 +19,7 @@ function HeroSection() {
                 <CustomButton label={'See Product'} styles={orangeButtonStyles} onClick={() => router.push('/asdf')} />
             </HeroSectionDescriptionStyles>
             <HeroImageStyles>
+                {/* replace with nextjs Image */}
                 <img src={desktopImage.src} alt='headphone image'/>
             </HeroImageStyles>
         </HeroSectionContainerStyles>
