@@ -17,16 +17,16 @@ function Header(props: HeaderProps) {
             <NavLinkContainerStyles>
                 {/* TODO add valid hrefs after pages are working */}
                 <li>
-                    <NavLink href=''><SubTitle>Home</SubTitle></NavLink>
+                    <NavLink href='/'><SubTitle>Home</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href=''><SubTitle>Headphones</SubTitle></NavLink>
+                    <NavLink href='/headphones'><SubTitle>Headphones</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href=''><SubTitle>Speakers</SubTitle></NavLink>
+                    <NavLink href='/speakers'><SubTitle>Speakers</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href=''><SubTitle>Earphones</SubTitle></NavLink>
+                    <NavLink href='/earphones'><SubTitle>Earphones</SubTitle></NavLink>
                 </li>
             </NavLinkContainerStyles>
             <Image src={cart} alt={'Click to show items in cart'} onClick={props.handleCartClick}/>
