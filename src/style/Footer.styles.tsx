@@ -4,7 +4,6 @@ import BodyText from "./BodyText.styles"
 
 export const FooterStyles = styled.footer`
 display: grid;
-width: 100%;
 height: fit-content;
 background: #101010;
 padding: 75px 165px 48px 165px;

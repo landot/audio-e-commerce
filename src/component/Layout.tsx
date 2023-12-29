@@ -1,14 +1,13 @@
 import React, { ReactNode } from 'react';
 import Footer from './Footer';
 import Header from './Header';
-import styled from 'styled-components';
-import { GlobalStyles } from '@/style/GlobalStyles.styles';
+import styled, { ThemeProvider } from 'styled-components';
 import Head from 'next/head';
+import theme, { GlobalStyle } from '@/style/globalStyles';
 
 export const LayoutStyles = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
     width: 100%;
     main {
         flex-grow: 1;
@@ -22,8 +21,8 @@ interface LayoutProps {
 
 function Layout(props: LayoutProps) {
     return (
-        <>
-            <GlobalStyles />
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
             <Head>
                 <link rel="shortcut icon" href="/icon.png" />
             </Head>
@@ -34,7 +33,7 @@ function Layout(props: LayoutProps) {
                 </main>
                 <Footer />
             </LayoutStyles>
-        </>
+        </ThemeProvider>
     );
 };
 
