@@ -15,6 +15,8 @@ const theme = {
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
+    height: 100%;
+    width: 100%;
     font-family: ${props => props.theme.fontFamily};
     margin: 0;
     padding: 0;
@@ -22,6 +24,11 @@ export const GlobalStyle = createGlobalStyle`
     color: ${props => props.theme.colors.black};
     max-width: 100vw;
     overflow-x: hidden;
+  }
+
+  #__next {
+    height: 100%;
+    width: 100%;
   }
 
   *, *::before, *::after {

@@ -7,9 +7,11 @@ export const LayoutStyles = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    main {
-        flex-grow: 1;
-    }
+    height: 100%;
+`
+
+export const MainStyles = styled.main`
+    flex-grow: 1;
 `
 
 interface LayoutProps {
@@ -21,9 +23,9 @@ function Layout(props: LayoutProps) {
     return (
         <LayoutStyles>
             <Header handleCartClick={props.handleCartClick} />
-            <main role='main'>
+            <MainStyles role='main'>
                 {props.children}
-            </main>
+            </MainStyles>
             <Footer />
         </LayoutStyles>
     );
