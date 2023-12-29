@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest",
+    "e2e": "npx playwright test",
     "coverage": "jest --collectCoverage",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.1",
     "@commitlint/config-conventional": "^17.7.0",
+    "@playwright/test": "^1.40.1",
     "@storybook/addon-essentials": "^7.5.0",
     "@storybook/addon-interactions": "^7.5.0",
     "@storybook/addon-links": "^7.5.0",
