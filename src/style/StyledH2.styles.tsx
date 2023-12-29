@@ -9,6 +9,7 @@ const StyledH2 = styled.h2`
   line-height: 44px;
   letter-spacing: 1.429px;
   text-transform: uppercase;
+  margin: 0;
 `;
 
 export default StyledH2;

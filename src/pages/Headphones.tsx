@@ -1,3 +1,4 @@
+import Banner from "@/component/Banner";
 import Layout from "@/component/Layout";
 
 export default function Headphones() {
@@ -5,7 +6,7 @@ export default function Headphones() {
         <Layout handleCartClick={function (): void {
             throw new Error("Function not implemented.");
         } }>
-            <p>Headphones</p>
+            <Banner text={"Headphones"} />
         </Layout>
     )
 }
