@@ -1,9 +1,7 @@
 import React, { ReactNode } from 'react';
 import Footer from './Footer';
 import Header from './Header';
-import styled, { ThemeProvider } from 'styled-components';
-import Head from 'next/head';
-import theme, { GlobalStyle } from '@/style/globalStyles';
+import styled from 'styled-components';
 
 export const LayoutStyles = styled.div`
     display: flex;
@@ -21,19 +19,13 @@ interface LayoutProps {
 
 function Layout(props: LayoutProps) {
     return (
-        <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <Head>
-                <link rel="shortcut icon" href="/icon.png" />
-            </Head>
-            <LayoutStyles>
-                <Header handleCartClick={props.handleCartClick} />
-                <main role='main'>
-                    {props.children}
-                </main>
-                <Footer />
-            </LayoutStyles>
-        </ThemeProvider>
+        <LayoutStyles>
+            <Header handleCartClick={props.handleCartClick} />
+            <main role='main'>
+                {props.children}
+            </main>
+            <Footer />
+        </LayoutStyles>
     );
 };
 

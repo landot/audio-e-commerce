@@ -16,16 +16,16 @@ function Header(props: HeaderProps) {
             </LeftHeaderStyles>
             <NavLinkContainerStyles>
                 <li>
-                    <NavLink href='/'><SubTitle>Home</SubTitle></NavLink>
+                    <NavLink href='/' aria-label="Home"><SubTitle>Home</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href='/headphones'><SubTitle>Headphones</SubTitle></NavLink>
+                    <NavLink href='/headphones' aria-label="Headphones"><SubTitle>Headphones</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href='/speakers'><SubTitle>Speakers</SubTitle></NavLink>
+                    <NavLink href='/speakers' aria-label="Speakers"><SubTitle>Speakers</SubTitle></NavLink>
                 </li>
                 <li>
-                    <NavLink href='/earphones'><SubTitle>Earphones</SubTitle></NavLink>
+                    <NavLink href='/earphones' aria-label="Earphones"><SubTitle>Earphones</SubTitle></NavLink>
                 </li>
             </NavLinkContainerStyles>
             <Image src={cart} alt={'Click to show items in cart'} onClick={props.handleCartClick}/>

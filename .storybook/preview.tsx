@@ -1,6 +1,7 @@
 import type { Preview } from "@storybook/react";
-import RootLayout from '../src/app/layout';
 import React from "react";
+import { ThemeProvider } from "styled-components";
+import theme, { GlobalStyle } from '../src/style/globalStyles';
 
 const preview: Preview = {
   parameters: {
@@ -16,11 +17,12 @@ const preview: Preview = {
 
 export const decorators = [
   (Story) => (
-    <RootLayout>
+    <ThemeProvider theme={theme}>    
+        <GlobalStyle />
         <div style={{ display: "flex", justifyContent: "center" }}>
           <Story />
         </div>
-    </RootLayout>
+    </ThemeProvider>
   ),
 ];
 
